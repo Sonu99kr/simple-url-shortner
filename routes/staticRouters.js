@@ -1,6 +1,7 @@
 const express = require("express");
 const URL = require("../models/url");
 const {restrictTo} = require("../middlewares/auth");
+const {handleUserLogout} = require("../controllers/user")
 
 const router = express.Router();
 
@@ -25,5 +26,7 @@ router.get("/signup", (req, res)=>{
 router.get("/login", (req, res)=>{
     return res.render("login")
 })
+
+router.post("/logout", handleUserLogout)
 
 module.exports = router;

@@ -3,6 +3,7 @@ const cookieParser = require("cookie-parser");
 const {connectToMongoDb} = require("./connect")
 const path = require("path")
 const { checkForAuthorization, restrictTo } = require("./middlewares/auth")
+const {handleUserLogout} = require("./controllers/user")
 
 const URL = require("./models/url")
 const app = express();
