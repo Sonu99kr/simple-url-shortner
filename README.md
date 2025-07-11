@@ -17,7 +17,7 @@ A lightweight and efficient URL shortening service that converts long URLs into 
 - **Backend**: Node.js with Express.js
 - **Database**: MongoDB
 - **Frontend**: HTML, CSS, JavaScript
-- **Additional Libraries**: 
+- **Additional Libraries**:
   - Body-parser for request handling
   - Mongoose for database operations
   - Shortid for generating unique short codes
@@ -28,22 +28,25 @@ A lightweight and efficient URL shortening service that converts long URLs into 
 
 - Node.js (v14 or higher)
 - npm or yarn
-- MongoDB 
+- MongoDB
 
 ### Setup Instructions
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Sonu99kr/simple-url-shortner.git
-   cd simple-url-shortner
+   cd short-url
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Start the application**
+
    ```bash
    npm start
    ```
