@@ -36,7 +36,7 @@ A lightweight and efficient URL shortening service that converts long URLs into 
 
    ```bash
    git clone https://github.com/Sonu99kr/simple-url-shortner.git
-   cd short-url
+   cd simple-url-shortner
    ```
 
 2. **Install dependencies**
