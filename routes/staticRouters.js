@@ -1,7 +1,7 @@
 const express = require("express");
 const URL = require("../models/url");
 const {restrictTo} = require("../middlewares/auth");
-const {handleUserLogout} = require("../controllers/user")
+const {handleUserLogout, handleUserLogin} = require("../controllers/user")
 
 const router = express.Router();
 
