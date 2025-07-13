@@ -19,6 +19,8 @@ const urlSchema = new mongoose.Schema({
     {timestamps: true}
 );
 
+urlSchema.index({ redirectUrl: 1, createdBy: 1}, { unique: true});
+
 const URL = mongoose.model("url", urlSchema);
 
 module.exports = URL;
