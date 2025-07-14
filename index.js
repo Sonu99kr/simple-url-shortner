@@ -7,7 +7,7 @@ require('dotenv').config();
 
 const URL = require("./models/url")
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8001;
 
 const staticRouters = require("./routes/staticRouters")
 const urlRoute = require("./routes/url");
