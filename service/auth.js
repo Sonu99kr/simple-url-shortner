@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-const secret = "sonu@$@#";
+require('dotenv').config();
+const SECRET = process.env.JWT_SECRET;
 
 function setUser(user){
     return jwt.sign({
@@ -7,13 +8,13 @@ function setUser(user){
         email: user.email,
         role: user.role,
     }, 
-    secret);
+    SECRET);
 }
 
 function getUser(token){
     if(!token) return null;
      try {
-        return jwt.verify(token, secret);
+        return jwt.verify(token, SECRET);
     } catch (error) {
         console.error("JWT Verification Error:", error.message);
         return null;
