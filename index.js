@@ -3,11 +3,11 @@ const cookieParser = require("cookie-parser");
 const {connectToMongoDb} = require("./connect")
 const path = require("path")
 const { checkForAuthorization, restrictTo } = require("./middlewares/auth")
-const {handleUserLogout} = require("./controllers/user")
+require('dotenv').config();
 
 const URL = require("./models/url")
 const app = express();
-const PORT = 8001;
+const PORT = process.env.PORT;
 
 const staticRouters = require("./routes/staticRouters")
 const urlRoute = require("./routes/url");
@@ -18,8 +18,7 @@ app.use(express.urlencoded({ extended : false}))
 app.use(cookieParser());
 app.use(checkForAuthorization);
 
-connectToMongoDb("mongodb://localhost:27017/short-url")
-.then( ()=> console.log("mongoDB connected"));
+connectToMongoDb()
 
 app.set("view engine", "ejs");
 app.set("views",path.resolve("./views"));
